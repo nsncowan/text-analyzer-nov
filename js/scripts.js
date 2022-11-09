@@ -24,3 +24,27 @@ function numberOfOccurencesInText(word, text) {
   });
   return wordCount;
 }
+
+function omitBadWord(text) {
+  const finalArray = [];
+  const badArray = [];
+  const newArray = text.split(" ");
+  newArray.forEach(function(element) {
+    if (element.toLowerCase().includes('zoinks')) {
+      badArray.push(element);
+    }
+    else if (element.toLowerCase().includes('muppeteer')) {
+      badArray.push(element);
+    }
+    else if (element.toLowerCase().includes('biffaroni')) {
+      badArray.push(element);
+    }
+    else if (element.toLowerCase().includes('loopdaloop')) {
+      badArray.push(element);
+    }
+    else {
+      finalArray.push(element);
+    }
+  })
+  return finalArray.join(" ");
+}

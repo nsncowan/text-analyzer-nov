@@ -68,3 +68,27 @@ const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
 
+describe: omitBadWords():
+
+test: "returns true if target word matches text"
+code: 
+const badWord = "zoinks"
+const text = "zoinks"
+omitBadWords(word, text)
+expected output: true
+
+test: "returns true if target word matches text regardless of case"
+code: 
+const badWord = "zoinks"
+const text = "Zoinks"
+omitBadWords(word, text)
+expected output: true
+
+test: "returns true if target word matches text consisting of multiple words"
+code: 
+const badWord = "zoinks"
+const text = "hello my name is zoinks"
+omitBadWords(word, text)
+expected output: true
+
+
